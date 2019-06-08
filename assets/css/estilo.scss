@@ -1,0 +1,312 @@
+
+@import	'bootstrap.css';
+@import	'fotos.css';
+$azul1: #00ADB5 !important;
+$white: #fff;
+$cinza2: #545454;
+$cinza3: #838b8b;
+$cinza4: #c8ced0;
+
+@font-face{
+	font-family: 'Rounded Elegance';
+		src: url('../fonts/Rounded_Elegance.eot'); /* Modo compatível com IE 9 */
+		src: url('../fonts/Rounded_Elegance.eot?#iefix') format('embedded-opentype'), /* IE6 e IE8 */
+				url('../fonts/Rounded_Elegance.woff2') format('woff2'), /* Browsers mais recentes */
+				url('../fonts/Rounded_Elegance.woff') format('woff'), /* Browsers recentes */
+				url('../fonts/Rounded_Elegance.ttf')  format('truetype'), /* Safari, Android e iOS */
+				url('../fonts/Rounded_Elegance.svg#svgFontName') format('svg'); /* iOS anteriores */
+}
+
+// Classe globais 
+body{
+	background-color: #000;
+	font-family: 'Oswald', sans-serif;
+	display: relative;
+	.gradient{
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 9.5));
+	}
+	hr{
+		background-color: $azul1;
+		height: 0.3px;
+	}
+	.inner-text{
+		p{
+		margin:  0 15px 15px 15px;
+		text-indent: 15px;
+		}			
+	}
+	h3 > small{
+	 color: #333333;
+	 text-shadow: $white 0.5px 0.5px 1px;
+	}
+	label{
+		font-size: 1.2em;
+	}
+	.botao-edit{
+			position: 	absolute;
+			z-index: 	2;
+			width: calc(100% - 30px);
+		}
+	
+		
+}
+// Classes Cabeçalho, menu 
+header{ 
+	position: fixed;	
+	width: 100%;
+	font-weight:bold;
+	z-index: 99;
+	.navbar{
+		font-size: 1.3em;					
+		background: #000 !important;
+	 	border: none !important;
+	 	border-top: 5px $azul1 solid !important;
+	 	margin-left:-15px ;
+	 	margin-right:-15px ;
+	 	border-top-left-radius: 0px !important ;
+	 	border-top-right-radius: 0px !important ;	
+	 	border-bottom-left-radius: 4px; 
+	 	border-bottom-right-radius: 4px; 
+	 	padding-left:15px;
+	 	padding-right: 40px;		
+		.nav-toggle{ background: $azul1;
+			&:hover{background: $azul1;}
+		}
+	 	.navbar-brand{
+	 		color: $white !important;
+	 	}	 	
+		.navbar-nav{
+			display:block;
+			float: right;
+		}
+		ul.dropdown-menu{
+			background: #000 !important;
+			padding: 1px 4px 4px 4px;
+			margin-left: -5px;
+			li a{line-height: 40px;}	
+		}
+		.navbar-nav li a{
+			color: $white !important;
+			padding-left: 27px !important;
+			padding-right: 27px !important;
+			// letter-spacing: 1px;
+ 		 	&:hover{
+ 		  		background: $azul1;
+ 		  		text-decoration: underline;
+ 		  		text-shadow: #000 1px 0 1px;
+ 		  		transition: 1s;
+ 		  	}
+ 		  	&:not(:hover){
+ 		  		transition: 1s;
+ 		  	}
+	 	}
+	}
+}		
+
+// Classes do corpo da pagina, titulos, imagens ...
+.main{			
+	.pagina{ 
+		height:300px;
+		z-index:0;
+		.pagina-title{
+			margin-top:80px;
+			color:$white;
+			font-size: 14rem;
+			text-shadow: $azul1  3px 3px 16px;
+		}
+	}
+	.corpo{	
+		font-family: 'Lato', 'Trebuchet MS', 'Arial', sans-serif;
+		min-height: 400px;
+		height: auto;
+		background: $white;
+		.padding-3{padding:3%}
+		figure.foto-legenda{
+			border: 8px solid $white;
+			box-shadow: 1px 1px 4px #000;
+			position: relative;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+			figcaption{
+				position: absolute;
+				top: 0px;
+				background-color: rgba(0,0,0,0.4);
+				color: $white;
+				width: 100%;
+				height: 100%;
+				padding: 10px;
+				box-sizing: border-box;
+				opacity: 0;
+				transition: opacity 1s;
+				.legenda-foto{
+					margin-top: 60%;
+					margin-left:5%
+				}
+			}
+			&:hover figcaption{
+				opacity: 1;
+			}	
+		}
+		form{
+			margin: 15px;
+			 .form-group-esc{
+			 	padding-left: 0;
+			 }
+			 .form-group-dir{
+			 	padding-right:0;
+			 }			 			
+		}
+		#mapa{height: 500px;}
+		.inner-title{ 
+			font-family: 'Rounded Elegance', 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'Trebuchet MS', sans-serif;
+			font-size: 20pt;
+			padding-left: 30px;
+			width: 100%; 
+			margin: 20px 0;
+			text-align: center;
+			display: block;
+			color: #030303;
+		}
+		.eventos{
+			display: block;
+			height: auto;
+			width: 100%;
+			padding: 0 15px 0 15px;
+			margin-bottom: 30px;			
+			span{
+				font-family: 'Rounded Elegance', 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'Trebuchet MS', sans-serif;
+				line-height: 22pt;
+				font-size: 1.8em;
+				color: #030303;
+				display: inline-block;
+				padding-bottom: 1rem;
+			}
+			p{			
+				font-size: 1.2em;
+				color: #363636;
+			}
+
+		}
+	}
+}
+// Rodapé
+footer{
+	text-align: center;
+	height: 100px;
+	vertical-align: center;
+	font-family: 'Lato', 'Trebuchet MS', 'Arial', sans-serif;
+	address{
+		margin: 20px auto;
+		a:hover{text-decoration:none;
+		}
+	}
+}
+
+@media screen and (max-width:768px){
+	header .navbar .navbar-nav{				
+		float: none;
+	} 
+	.main {			
+		.pagina .pagina-title{			
+				font-size: 10rem;
+		}	
+		.corpo{
+			form{
+			margin: 15px;
+			 .form-group-esc{
+			 	padding-right: 0;
+			 }
+			 .form-group-dir{
+			 	padding-left:0;
+			 }
+			
+		}
+			#mapa{height: 300px;} 
+			.eventos p {
+		    text-align: justify;
+		    font-size: 15pt;  	    	   
+		    }     
+		    .inner-text p{ 
+				font-size: 15pt;
+			} 
+		}
+	}
+ }
+ @media screen and (min-width:768px){
+	.inner-text{
+		padding-right: 0 !important;
+		margin-right: 0 !important;
+	} 
+	.main .corpo{
+		#mapa{height: 300px;} 
+		
+	 }              
+ }
+ @media screen and (min-width:992px){
+	.main .corpo #mapa{height: 450px;} 
+		
+	 
+	.inner-text{
+		p{
+		font-size: 17px;
+		}			
+	}               
+ }
+ @media screen and (min-width:1200px){
+	.inner-text{
+		p{
+		font-size: 19px;
+		}			
+	}               
+ }
+
+ .btn-primary:active,.btn-primary:visited{
+ 	background: $azul1;
+ }
+
+ /*Estilização Google Maps*/
+.caneca{
+	position: relative;
+	.tete{
+	height:48px; 
+	width: calc(100% - 30px);
+	background: $white;
+	position:absolute; 
+	top:0;
+	z-index: 1;
+	padding: 15px;
+	left: 15px;
+	}
+}
+
+.nav li:last-child{
+	position: relative	
+}
+.login{
+	width: 300px;
+	height: 300px;
+	background: #373737;
+	color: $white;
+	position: absolute;
+	top: 49px; right: 0;
+	font-family: 'Lato', 'Trebuchet MS', 'Arial', sans-serif;
+	font-size: 14px;
+	padding: 20px;
+	border-radius: 9px;
+	display:none;
+		@media (max-width: 767px){			
+			width: 100%
+		}
+		form{
+				margin-top: 25px;
+			}
+}
+		
+	 
+		
+		
+		
+		
+		

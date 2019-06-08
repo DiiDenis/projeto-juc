@@ -1,0 +1,232 @@
+@charset "UTF-8";
+@import url(bootstrap.css);
+@import url(fotos.css);
+@font-face {
+  font-family: 'Rounded Elegance';
+  src: url("../fonts/Rounded_Elegance.eot");
+  /* Modo compat├¡vel com IE 9 */
+  src: url("../fonts/Rounded_Elegance.eot?#iefix") format("embedded-opentype"), url("../fonts/Rounded_Elegance.woff2") format("woff2"), url("../fonts/Rounded_Elegance.woff") format("woff"), url("../fonts/Rounded_Elegance.ttf") format("truetype"), url("../fonts/Rounded_Elegance.svg#svgFontName") format("svg");
+  /* iOS anteriores */ }
+body {
+  background-color: #000;
+  font-family: 'Oswald', sans-serif;
+  display: relative; }
+  body .gradient {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), black); }
+  body hr {
+    background-color: #00ADB5;
+    height: 0.3px; }
+  body .inner-text p {
+    margin: 0 15px 15px 15px;
+    text-indent: 15px; }
+  body h3 > small {
+    color: #333333;
+    text-shadow: #fff 0.5px 0.5px 1px; }
+  body label {
+    font-size: 1.2em; }
+  body .botao-edit {
+    position: absolute;
+    z-index: 2;
+    width: calc(100% - 30px); }
+
+header {
+  position: fixed;
+  width: 100%;
+  font-weight: bold;
+  z-index: 99; }
+  header .navbar {
+    font-size: 1.3em;
+    background: #000 !important;
+    border: none !important;
+    border-top: 5px #00ADB5 solid !important;
+    margin-left: -15px;
+    margin-right: -15px;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-left: 15px;
+    padding-right: 40px; }
+    header .navbar .nav-toggle {
+      background: #00ADB5 !important; }
+      header .navbar .nav-toggle:hover {
+        background: #00ADB5 !important; }
+    header .navbar .navbar-brand {
+      color: #fff !important; }
+    header .navbar .navbar-nav {
+      display: block;
+      float: right; }
+    header .navbar ul.dropdown-menu {
+      background: #000 !important;
+      padding: 1px 4px 4px 4px;
+      margin-left: -5px; }
+      header .navbar ul.dropdown-menu li a {
+        line-height: 40px; }
+    header .navbar .navbar-nav li a {
+      color: #fff !important;
+      padding-left: 27px !important;
+      padding-right: 27px !important; }
+      header .navbar .navbar-nav li a:hover {
+        background: #00ADB5 !important;
+        text-decoration: underline;
+        text-shadow: #000 1px 0 1px;
+        transition: 1s; }
+      header .navbar .navbar-nav li a:not(:hover) {
+        transition: 1s; }
+
+.main .pagina {
+  height: 300px;
+  z-index: 0; }
+  .main .pagina .pagina-title {
+    margin-top: 80px;
+    color: #fff;
+    font-size: 14rem;
+    text-shadow: #00ADB5  3px 3px 16px; }
+.main .corpo {
+  font-family: 'Lato', 'Trebuchet MS', 'Arial', sans-serif;
+  min-height: 400px;
+  height: auto;
+  background: #fff; }
+  .main .corpo .padding-3 {
+    padding: 3%; }
+  .main .corpo figure.foto-legenda {
+    border: 8px solid #fff;
+    box-shadow: 1px 1px 4px #000;
+    position: relative; }
+    .main .corpo figure.foto-legenda img {
+      width: 100%;
+      height: 100%; }
+    .main .corpo figure.foto-legenda figcaption {
+      position: absolute;
+      top: 0px;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      opacity: 0;
+      transition: opacity 1s; }
+      .main .corpo figure.foto-legenda figcaption .legenda-foto {
+        margin-top: 60%;
+        margin-left: 5%; }
+    .main .corpo figure.foto-legenda:hover figcaption {
+      opacity: 1; }
+  .main .corpo form {
+    margin: 15px; }
+    .main .corpo form .form-group-esc {
+      padding-left: 0; }
+    .main .corpo form .form-group-dir {
+      padding-right: 0; }
+  .main .corpo #mapa {
+    height: 500px; }
+  .main .corpo .inner-title {
+    font-family: 'Rounded Elegance', 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    padding-left: 30px;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+    display: block;
+    color: #030303; }
+  .main .corpo .eventos {
+    display: block;
+    height: auto;
+    width: 100%;
+    padding: 0 15px 0 15px;
+    margin-bottom: 30px; }
+    .main .corpo .eventos span {
+      font-family: 'Rounded Elegance', 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'Trebuchet MS', sans-serif;
+      line-height: 22pt;
+      font-size: 1.8em;
+      color: #030303;
+      display: inline-block;
+      padding-bottom: 1rem; }
+    .main .corpo .eventos p {
+      font-size: 1.2em;
+      color: #363636; }
+
+footer {
+  text-align: center;
+  height: 100px;
+  vertical-align: center;
+  font-family: 'Lato', 'Trebuchet MS', 'Arial', sans-serif; }
+  footer address {
+    margin: 20px auto; }
+    footer address a:hover {
+      text-decoration: none; }
+
+@media screen and (max-width: 768px) {
+  header .navbar .navbar-nav {
+    float: none; }
+
+  .main .pagina .pagina-title {
+    font-size: 10rem; }
+  .main .corpo form {
+    margin: 15px; }
+    .main .corpo form .form-group-esc {
+      padding-right: 0; }
+    .main .corpo form .form-group-dir {
+      padding-left: 0; }
+  .main .corpo #mapa {
+    height: 300px; }
+  .main .corpo .eventos p {
+    text-align: justify;
+    font-size: 15pt; }
+  .main .corpo .inner-text p {
+    font-size: 15pt; } }
+@media screen and (min-width: 768px) {
+  .inner-text {
+    padding-right: 0 !important;
+    margin-right: 0 !important; }
+
+  .main .corpo #mapa {
+    height: 300px; } }
+@media screen and (min-width: 992px) {
+  .main .corpo #mapa {
+    height: 450px; }
+
+  .inner-text p {
+    font-size: 17px; } }
+@media screen and (min-width: 1200px) {
+  .inner-text p {
+    font-size: 19px; } }
+.btn-primary:active, .btn-primary:visited {
+  background: #00ADB5 !important; }
+
+/*Estiliza├º├úo Google Maps*/
+.caneca {
+  position: relative; }
+  .caneca .tete {
+    height: 48px;
+    width: calc(100% - 30px);
+    background: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    padding: 15px;
+    left: 15px; }
+
+.nav li:last-child {
+  position: relative; }
+
+.login {
+  width: 300px;
+  height: 300px;
+  background: #373737;
+  color: #fff;
+  position: absolute;
+  top: 49px;
+  right: 0;
+  font-family: 'Lato', 'Trebuchet MS', 'Arial', sans-serif;
+  font-size: 14px;
+  padding: 20px;
+  border-radius: 9px;
+  display: none; }
+  @media (max-width: 767px) {
+    .login {
+      width: 100%; } }
+  .login form {
+    margin-top: 25px; }
+
+/*# sourceMappingURL=estilo.css.map */
